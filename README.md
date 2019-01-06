@@ -5,7 +5,7 @@
 A chatbot implementation from scratch to help resolve human queries about the blood camp .
 
 ### Undersatnding the database - 
-The donation camps are spread across 5 districts of Andhra Pradesh , namely Kurnool , Guntur , Kadapa , Chitoor and Anantapur (district table) . Each district has a hospital where the camp is active (hospital table). The hospital table also gives information about the number of units of each blood group left at the hospitals . 
+The donation camps are spread across 5 districts of the state Andhra Pradesh in India ; namely Kurnool , Guntur , Kadapa , Chitoor and Anantapur (district table) . Each district has a hospital where the camp is active (hospital table). The hospital table also gives information about the number of units of each blood group left at the hospitals . 
 
 - Only district and hospital tables have been used in the Data Service Layer for quering the database through the chat implementation . Work has to be extended upto querying the entire database and updating the same .
 
