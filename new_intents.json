@@ -1,0 +1,46 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day","Sup","yo","Hey","Hey man","How’s it going?","How are you doing?","What’s up?","What’s going on?","How’s everything ?","How are things?","How’s life?","How’s your day?","How’s your day going?","Good to see you","Nice to see you","Good morning","Morning","Good afternoon","Afternoon","Good evening","evening","It’s nice to meet you","Pleased to meet you","How have you been?","How do you do? ","Whazzup?"," Hiya!"],
+         "function": "greeting_handler",
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye","See you soon","Talk to you later","I’m off","Have a nice day","Have a good day","Goodnight","Take care","Catch you later"," I’m out of here"," I’m out"," I gotta take off","I gotta head out","I gotta go.","Farewell","Later","So long","Alright then","good night"],
+         "function":"goodbye_handler"
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful","Thank you for helping","Thanks for your help","Thanks for your service ", "Really helpful , thank you", "Very much appreciated." ,"Thanks a lot.","Loved your service , thanks","Thanks man!","Great service man","Thanks dear","Very helpful" ,"Thanks for taking time","Thanks for the information","Thank you for the information","Thanks for the details","Thank you for the details","The details were useful , thanks","The details were useful , thank you"],
+         "function": "thanks_handler"
+        },
+        {"tag": "district",
+         "patterns": ["Could i know more about your services ?","","I want to know some information about the districts you serve.","Can I get some information about your camps ?","Can I get some information about your services ?","Can I get some information about your hospitals ?","Where do you offer your services ?","Where can I visit ?","Where are your camps located ?","Which districts have your camps running ?","In which districts do you serve ?","In which districts do you operate ?","Where can I donate or receive blood ?","Where do you operate ?","Which districts offer the service ?","Which are the districts I can donate or receive blood ?","Which districts take blood deposits ?","Can I donate blood in *district_name* district?","Can I get blood from *district_name* district ?","Are there any hospitals in *district_name* district for donating blood?","Are there any hospitals in *district_name* district for receiving blood?","How many districts offer the blood donation or receiving service ?","Are there any camps in *district_name* ?","Are you operating in any district ?", "Where are your hospitals located ?","Where can I find your hospitals ?","Which places do you have your camps running ?","Which are the districts you operate in ?","Which places are your hospitals located ?","Which places are your camps located ?"],
+         "context_set":"district",
+         "function" : "district_handler"
+        },
+        {
+            "tag": "time",
+            "patterns": ["What time can I come to donate blood ?","When can I receive blood ?","When can we donate or receive blood from the hospitals in this district ?","When is the time to visit the hospitals to donate or receive blood ?","What time should i visit the hospital ?","What time should i visit the camp ?","What time ?","What time can I come?","What time can I visit ?","How long will the camps be open ?","What is the usual timing ?","How long will the hospitals be open ?","When ?","When do I come ?","When do I have to come ?","What time ?","When should I visit ?","When can I visit ?","When can I come ?","What is the time I should be visiting ?","When do I have to go ?","What time should I go?","When are the hospitals open ?","What time during the day do the camps function ?","What are the working hours ?","Working hours ?","When do the hospitals open ?","When do the camps open ?","When do the hospitals close ?","When do the camps close ?","how long are your camps open ?","how long are your camps open ?","how long are your hospitals open ?","I want to know if the camps will be open after *time* .","Will your camps start by *time* ?","I want to know if your camps will start by *time* .","Can I visit after *time*?","Can I visit before *time*?","Will you be open until *time* ?","Will you be closed by *time?*","Are your camps open until *time* ?","Will your camps be open in the afternoons?","Are your camps functioning in the morning ?","Are your camps functioning in the night as well ?"],
+            "function": "time_handler",
+            "context_filter": ["district","hospital"]
+        },
+        {
+            "tag": "want to donate",
+            "patterns": ["I want to donate blood.","I am willing to donate blood.","I wish to donate blood.","I intend to donate blood.","i would like to donate blood","I want to give my blood.","My relative wants to give blood.","My relative wants to donate blood.","My relative would like to give blood.","My relative would like to donate blood.","My relative wishes to give blood.","My relative wishes to donate blood.","My son wants to give blood.","My daughter wants to give blood.","My wife wants to give blood.","My mother wants to give blood.","My father wants to give blood.","My husband wants to give blood.","My uncle wants to give blood.","My aunt wants to give blood.","My son wants to donate blood.","My daughter wants to donate blood.","My wife wants to donate blood.","My mother wants to donate blood.","My father wants to donate blood.","My husband wants to donate blood.","My uncle wants to donate blood.","My aunt wants to donate blood.","My son wishes to donate blood.","My daughter wishes to donate blood.","My wife wishes to donate blood.","My mother wishes to donate blood.","My father wishes to donate blood.","My husband wishes to donate blood.","My uncle wishes to donate blood.","My aunt wishes to donate blood.","My son wishes to give blood.","My daughter wishes to give blood.","My wife wishes to give blood.","My mother wishes to give blood.","My father wishes to give blood.","My husband wishes to give blood.","My uncle wishes to give blood.","My aunt wishes to give blood.","My son is willing to give blood.","My daughter is willing to give blood.","My wife is willing to give blood.","My mother is willing to give blood.","My father is willing to give blood.","My husband is willing to give blood.","My uncle is willing to give blood.","My aunt is willing to give blood.","My son is willing to donate blood.","My daughter is willing to donate blood.","My wife is willing to donate blood.","My mother is willing to donate blood.","My father is willing to donate blood.","My husband is willing to donate blood.","My uncle is willing to donate blood.","My aunt is willing to donate blood.","I want to know if I can donate blood.","I want to know if I can give blood.","I would like to know if I can donate blood.","I would like to know if I can give blood.","I wish to donate blood","I wish to give blood","I'm here to see if I can donate blood.","I'm here to see if I can give blood.","I'm here to check if I can donate blood.","I'm here to check if I can give blood."],
+            "function": "want2donate_handler",
+            "context_set": ""
+        },
+        {
+            "tag": "want to receive",
+            "patterns": ["I am need of some blood.","I want to receive blood.","I need blood urgently.","We are in immediate need of *blood_group* blood.","I want to know if I can receive *blood_group* blood.","My relative needs blood.","My relative wants blood.","My son wants blood.","My daughter wants blood.","My wife wants blood.","My mother wants blood.","My father wants blood.","My husband wants blood.","My uncle wants blood.","My aunt wants blood.","My son needs blood.","My daughter needs blood.","My wife needs blood.","My mother needs blood.","My father needs blood.","My husband needs blood.","My uncle needs blood.","My aunt needs blood.","My son is in need of blood.","My daughter is in need of blood.","My wife is in need of blood.","My mother is in need of blood.","My father is in need of blood.","My husband is in need of blood.","My uncle is in need of blood.","My aunt is in need of blood.","I want to know if I can get some blood.","I want to know if I can receive some blood.","I would like to know if I can get some blood.","I would like to know if I can receive some blood.","I wish to receive blood","I want blood immediately .","I need blood immediately .","I'm here to see if I can receive blood.","I'm here to see if I can get some blood.","I'm here to check if I can receive blood.","I'm here to check if I can get some blood."],
+            "function": "want2receive_handler",
+            "context_set": ""
+        },
+        {
+            "tag": "no reply",
+            "patterns": ["Oh", "Oh I see","Okay","Hmm","Fine","Alright","Ok","Yeah Okay" ,"yeah Ok","I see","I understand","I get it"],
+            "function": "no_reply_handler"
+        }
+	
+   ]
+}
+

@@ -1,0 +1,30 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "district",
+         "patterns": ["Which districts offer the service ?","Which are the districts I can donate or receive blood ?","Which districts take blood deposits ?","Can I donate blood in *district_name* district?","Can I get blood from *district_name* district ?","Are there any hospitals in *district_name* district for donating blood?","Are there any hospitals in *district_name* district for receiving blood?","How many districts offer the blood donation or receiving service ?"],
+         "responses": ["district"],
+         "context_set":"district",
+         "function" : "district_handler"
+        },
+        {
+            "tag": "time",
+            "patterns": ["What time can I come to donate blood ?","When can I receive blood ?","When can we donate or receive blood from the hospitals in this district ?","When is the time to visit the hospitals to donate or receive blood ?"],
+            "responses": ["The camps in the hospitals open at 9AM and close by 11PM ."],
+            "context_filter": "district"
+        }
+	
+   ]
+}
+

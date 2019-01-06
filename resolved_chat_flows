@@ -1,0 +1,25 @@
+#7   ---- handled the willing2donate problem and time issue
+
+Hello there !
+hey , I want to donate blood
+bot reply -  Pleased to hear that
+How can I help you ?
+
+can i visit any of your camps in anantapur district ?
+bot reply -  Yes
+
+what time ?
+bot reply -  The camps in the hospitals open at 9AM and close by 11PM .
+
+okay thank you
+bot reply -  Happy to help!
+
+bye
+bot reply -  See you later, thanks for visiting
+
+hey , I want to donate blood-->want to donate
+can i visit any of your camps in anantapur district ?-->district
+what time ?-->time
+okay thank you-->thanks
+bye-->goodbye
+
